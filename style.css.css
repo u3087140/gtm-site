@@ -1,4 +1,4 @@
-@charset "UTF-8";
+/* Here I am changing the background to by an orange image, as I originally specified in my Design Audit that I wanted a colourful orange background */
 html {
 	background-attachment: fixed;
 	background-image: url(../images/Yellow_and_Orange_Background.jpg);
@@ -6,9 +6,11 @@ html {
 	background-position: left top;
 	background-size: cover;
 }
+
+/* As you'll notice, I set my website width to 1200px. This is what I decided upon in my Design Audit as it was a very standard size, so I stuck with it for this project. I also use white as the main background colour for the center container of the website */
 .container {
 	background-color: #FFFFFF;
-	width: 90%;
+	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	border-bottom-width: 0px;
@@ -17,80 +19,25 @@ html {
 	padding-right: 0px;
 	padding-bottom: 0px;
 }
-.row {
-	width: 100%;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	display: inline-block
-}
-#bg {
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
-}
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
-}
-.row.blockDisplay {
-	display: block;
-}
-.column_half {
-	width: 50%;
+
+/* Here I create my column styling. I chose to make two sizes; one that is 66% width, and one that is 34% width to add some intrigue. I feel that it works better, as I placed my images in the wider columns and my text in the narrower columns. I originally was going to use 60% and 40% width (hence the names), but I then changed the widths */
+.column_40 {
+	width: 34%;
 	float: left;
 	margin-top: 0px;
 }
-.columns {
-	width: 50%;
+.column_60 {
+	width: 66%;
 	float: left;
-	font-family: Helvetica, Arial, sans-serif;
-	color: #A5A5A5;
-	line-height: 24px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	text-align: justify;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
+	margin-top: 0px;
 }
-.row .columns p {
-	padding-left: 10%;
-	padding-right: 10%;
-}
-.container .columns h4 {
-	text-align: center;
-	color: #01B2D1;
-}
-.primary_header {
-	width: 100%;
-	background-color: #52bad5;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	clear: left;
-	border-bottom: 2px solid #2C9AB7;
-}
+
+/* This is my navigation bar styling, all under 'secondary header'. I used a dark grey, as I had specified in the Design Audit */
 .secondary_header {
 	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
-	background-color: #737373;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #414141;
 	clear: left;
 }
 .container .secondary_header ul {
@@ -104,91 +51,107 @@ html {
 	padding-left: 0px;
 	width: 100%;
 }
+
+/* For the navigation list, I used Helvetica in white */
 .secondary_header ul li {
 	list-style: none;
 	float: left;
 	margin-right: auto;
 	margin-top: 0px;
 	font-family: "Helvetica";
-	font-weight: normal;
+	font-weight: 600;
+	font-size: large;
 	color: #FFFFFF;
 	letter-spacing: 1px;
 	margin-left: auto;
 	text-align: center;
-	width: 16%;
+	width: 24%;
 	transition: all 0.3s linear;
 }
+
+/* The items change to orange when hovered over, making them easy to distinguish as links */
 .secondary_header ul li:hover {
 	color: #FFA31F;
 	cursor: pointer;
 }
 .left_article {
 	background-color: #FFFFFF;
-	width: 40%;
+	width: 34%;
 	float: left;
 	font-family: "Helvetica";
 	color: #343434;
-	padding-bottom: 15px;
 }
+
+/* This is for headings that I don't want to display */
 .noDisplay {
 	display: none;
 }
+
+/* below is all the formatting I've done for various sizes of heading text and paragraphs in the left article */
 .container .left_article h3 {
-	padding-left: 5%;
-	padding-right: 5%;
-	margin-top: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-top: 10%;
 	color: #717070;
 	font-weight: bold;
 	text-transform: uppercase;
 }
+.container .left_article h4 {
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-top: 2%;
+	color: #717070;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.container .left_article h5 {
+	padding-bottom: 15px;
+	margin-top: 2%;
+	color: #717070;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.container .left_article h1 {
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-top: 10%;
+	color: #717070;
+	font-weight: bold; 
+	font-size: xx-large;
+}
+.container .left_article h2 {
+	padding-left: 10%;
+	padding-right: 10%;
+	margin-top: 2%;
+	color: #717070;
+	font-weight: bold;
+	font-size: xx-large;
+}
 .container .left_article p {
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 10%;
+	padding-right: 10%;
 	text-align: justify;
 	line-height: 24px;
 	margin-top: 30px;
-	margin-bottom: 15px;
-	color: #B3B3B3;
+	margin-bottom: 30px;
+	color: #1E1E21;
 }
+
+/* I gave the right article a faint background colour to help distinguish it from the left article */
 .right_article {
-	width: 60%;
+	width: 66%;
 	float: left;
 	background-color: #F6F6F6;
 }
-.container .right_article ul {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-}
-.right_article ul li {
-	font-family: "Helvetica";
-	list-style: none;
-	text-align: center;
-	background-color: #B3B3B3;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	color: #FFFFFF;
-	font-weight: bold;
-	border-radius: 0px;
-	transition: all 0.3s linear;
-	border-left: 5px solid #717070;
-}
-.right_article ul li:hover {
-	background-color: #717070;
-	cursor: pointer;
-}
+
+/* The footer has a nice dark blue colour to set it apart. The padding allows it to be slim, yet noticeable */
 .footer {
-	background-color: #717070;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	background-color: #2D3B48;
+	clear: left;
 }
 .title {
 	font-weight: bold;
@@ -198,30 +161,46 @@ html {
 	color: #FFFFFF;
 	letter-spacing: 2px;
 }
+
+/* This is used for placing most of my main images. It gives a small amount of padding so that the images don't look cluttered */
 .placeholder {
-	/* [disabled]max-width: 400px;
-*/
-	/* [disabled]max-height: 200px;
-*/
-	width: 100%;
+	width: 95%;
 	padding-top: 30px;
-	/* [disabled]padding-left: 19px;
-*/
+	padding-left: 2.5%;
 	padding-bottom: 30px;
-	height: 100%;
+	height: 95%;
+	padding-right: 2.5%;
 }
+
+/* I purposely put a margin at the top of my banner image, as I prefer the look. I also put a small margin at the bottom of the image, as I tried it without and found that the transition between the image and the navigation bar (which is dark grey) was hard to spot as it blended together a bit too much, making it look heavy. By adding a margin between the banner image and the nav bar, the orange background shines through and frees it up a bit */
+.banner-image {
+	width: 1200px;
+	height: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom-width: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+/* Used specifically for the large image on the index page. Again, a small amount of padding helps give a clean appearance */
+.big-image {
+	width: 97%;
+	padding-top: 20px;
+	padding-left: 1.5%;
+	padding-bottom: 0px;
+	height: 97%;
+	padding-right: 1.5%;
+}
+
+/* These refer to the small orange boxes above the footer. These could have text placed inside them if necessary, but I perfer the plain aesthetic look of leaving them empty */
 .left_half {
 	background-color: #FFA926;
-}
-.container .column_half.left_half h2 {
-	color: #FFFFFF;
-	font-family: "Helvetica";
-	text-align: center;
-}
-.container .column_half.left_half h4 {
-	color: #FFFFFF;
-	font-family: "Helvetica";
-	text-align: center;
 }
 .right_half {
 	background-color: #FFE07B;
@@ -230,13 +209,16 @@ html {
 	text-align: center;
 	font-weight: bold;
 }
+
 .column_title {
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
+
+/* As you'll notice, I chose a lighter weight font for the copyright text. It doesn't neet to draw unneccesary attention, so this is suitable */
 .copyright {
 	text-align: center;
-	background-color: #717070;
+	/* [disabled]background-color: #717070; */
 	color: #FFFFFF;
 	text-transform: uppercase;
 	font-weight: lighter;
@@ -244,216 +226,63 @@ html {
 	border-top-width: 2px;
 	font-family: "Helvetica";
 }
-body {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-}
 
-@media (max-width: 320px) {
-.secondary_header ul li {
-	float: none;
-	margin-top: 28px;
-	margin-left: 0px;
-	width: 100%;
-}
-.container .secondary_header ul {
+/* I added just a small amount of padding at the top of the lineup section */
+.lineup {
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	height: auto;
-	width: 100%;
-	text-align: center;
-}
-.secondary_header {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 1px;
+	padding-top: 10px;
 	padding-bottom: 40px;
 }
-.left_article {
-	width: 100%;
-	height: auto;
+
+
+/* Here I have the formatting for white text that is a navigation link, such as the ones in the navigation bar. They orange when hovered, and don't change after being visited */
+a.nav-link:link
+{
+	color: #FFFFFF;
+	text-decoration: none;
 }
-.right_article {
-	width: 100%;
-	height: auto;
+a.nav-link:visited
+{
+   color: #FFFFFF;
+   text-decoration: none;
 }
-.placeholder {
-	width: 100%;
-	margin-top: 22PX;
-	margin-right: 0px;
-	margin-bottom: 22PX;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	max-width: 400px;
-	max-height: 200px;
-	height: auto;
+a.nav-link:hover
+{
+	color: #FFA31E;
+	text-decoration: none;
 }
-.columns {
-	width: 100%;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0PX;
-	padding-right: 0PX;
-	padding-bottom: 0PX;
-	padding-left: 0PX;
+a.nav-link:active
+{
+   color: #fb3f00;
+   text-decoration: none;
+   
+   
+   /* This is all the styling for links that are in black text, such as the ones on the Lineup page. They also change to orange when hovered upon */
+}a.nav-link2:link
+{
+	color: #000000;
+	text-decoration: none;
 }
-.columns p {
-	padding-left: 10px;
-	padding-right: 10px;
+a.nav-link2:visited
+{
+	color: #000000;
+	text-decoration: none;
 }
-.column_half.left_half {
-	width: 100%;
-	color: inherit;
+a.nav-link2:hover
+{
+	color: #FFA31E;
+	text-decoration: none;
 }
-.column_half.right_half {
-	width: 100%;
-}
-.copyright {
-	padding-top: 25px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-}
-.container .left_article h3 {
-	margin-top: 30px;
-}
-.social .social_icon img {
-	width: 80%;
-}
-.container .secondary_header {
-}
+a.nav-link2:active
+{
+   color: #fb3f00;
+   text-decoration: none;
 }
 
-@media (min-width: 321px) and (max-width: 768px) {
-.secondary_header ul li {
-	float: none;
-	margin-top: 28px;
-	margin-left: 0px;
-	width: 100%;
-}
-.container .secondary_header ul {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	height: auto;
-	width: 100%;
-	text-align: center;
-}
-.secondary_header {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 1px;
-	padding-bottom: 40px;
-}
-.left_article {
-	width: 100%;
-	height: auto;
-}
-.right_article {
-	width: 100%;
-	height: auto;
-	padding-bottom: 25px;
-}
-.placeholder {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	max-height: 100%;
-}
-.columns {
-	width: 100%;
-	margin-top: 6px;
-	margin-right: 0px;
-	margin-bottom: 6px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-}
-.columns p {
-	padding-left: 14px;
-	padding-right: 14px;
-}
-.column_half.left_half {
-	width: 100%;
-}
-.column_half.right_half {
-	width: 100%;
-}
-}
-
-@media (min-width: 769px) and (max-width: 1000px) {
-.secondary_header {
-	overflow: auto;
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-.secondary_header ul li {
-	margin-top: 10px;
-	margin-right: 7%;
-	margin-bottom: 10px;
-	margin-left: 7%;
-}
-.left_article {
-	height: auto;
-}
-.right_article {
-	height: auto;
-	padding-bottom: 27px;
-}
-.placeholder {
-	width: 100%;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-.columns {
-	width: 50%;
-	float: left;
-	padding-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-}
-.container .columns p {
-	padding-left: 25px;
-	padding-right: 25px;
-}
-}
-
-@media (min-width: 1001px) {
-}
+/* These thumbnails are for the social media icons */
 .thumbnail {
 	width: 100px;
 	border-radius: 200px;
@@ -463,6 +292,8 @@ body {
 .thumbnail_align {
 	text-align: center;
 }
+
+/* This is the box that the social media icons sit in. Again, I used a dark grey as specified in my Design Audit */
 .social {
 	text-align: center;
 	margin-right: 0px;
@@ -479,21 +310,55 @@ body {
 	float: left;
 	transition: all 0.3s linear;
 	line-height: 0px;
-	padding-top: 7px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
+
+/* The social media icons turn to an opacity of 50% when hovered upon, making it easy to know that they are clickable links */
 .container .social .social_icon:hover {
 	cursor: pointer;
 	opacity: 0.5;
 }
-#menu {
-}
-.header-image {
-	width: 90%;
-	display: inherit;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: auto;
-}
 .middle_article {
 	width: auto;
+}
+
+/* This is the styling for the list used on the lineup page. I played around with the width, height and padding extensively to try and make it look interesting and clean. I wasn't quite able to achieve the desired appearance but I am still happy with it  */
+.left_article_ul {
+	font-family: "Helvetica";
+	list-style: none;
+	text-align: left;
+	background-color: #FFFFFF;
+	width: 77%;
+	height: 77%;
+	padding-top: 30px;
+	padding-bottom:65px;
+	color: #2F2F2F;
+	font-weight: bold;
+	font-size: 18px;
+	transition: all 0.3s linear;
+	border-left: 15px solid #717070;
+	padding-left: 11%;
+	padding-right: 0%;
+}
+
+/* This is another image placeholder, only being used on the index page (for the "Groovin' the Moo. 2016. All new lineup. Discover the hype" image */
+.placeholder_2 {
+	width: 108%;
+	padding-top: 30px;
+	padding-left: 0%;
+	padding-bottom: 30px;
+	height: 100%;
+	padding-right: 4%;
+	font-size: x-large;
+	text-align: left;
+}
+
+/* This is the styling for my videos on the index page and artist pages. I want the videos to take up almost the full width, with just a small amount of padding on either side and on the top and bottom */
+.video {
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 0px;
+	padding-bottom: 20px
 }
